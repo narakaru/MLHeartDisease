@@ -84,7 +84,9 @@ def exploreDataSet():
 
 
 #Load dataset to the dataframe   
-dataF = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv')
+df_train = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv')
+#for local dataset
+#df_train = pd.read_csv('heart_failure_clinical_records_dataset.csv')
 feat_labels = ['age','anaemia','creatinine_phosphokinase','diabetes','ejection_fraction','high_blood_pressure','platelets','serum_creatinine','serum_sodium','sex','smoking','time','DEATH_EVENT']
 
 #Prepare the train and test dataset
@@ -145,6 +147,7 @@ evalModels(models, X_train, y_train, X_test, y_test )
 
 #------------------------Training the Selected Model Before Feature Selection------------------------------
 dataF = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv')
+#for local dataset
 #dataF = pd.read_csv('heart_failure_clinical_records_dataset.csv')
 
 y = dataF.DEATH_EVENT
